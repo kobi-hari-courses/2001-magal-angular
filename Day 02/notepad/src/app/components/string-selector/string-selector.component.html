@@ -1,0 +1,6 @@
+<ul>
+    <li *ngFor="let item of options"
+        (click)="askToSelect(item)"
+        [class.nivchar]="item===selected"
+    >{{item}}</li>
+  </ul>

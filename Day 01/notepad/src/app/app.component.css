@@ -1,0 +1,35 @@
+:host {
+    display: grid;
+    grid-template-rows: 200px 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+div {
+    display: grid;
+}
+
+.text-area {
+    grid-column: 1/-1;
+}
+
+ul {
+
+}
+
+li {
+    list-style: none;
+    margin: 4px;
+    border: 1px solid gray;
+    border-radius: 8px;
+    padding: 4px;
+    cursor: pointer;
+    transition: 0.7s;
+}
+
+li:hover {
+    background: rgb(228, 228, 228);
+}
+
+li.nivchar {
+    background: lightgreen;
+}

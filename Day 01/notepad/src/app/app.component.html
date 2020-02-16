@@ -1,0 +1,32 @@
+<div class="colors-area">
+  <ul>
+    <li *ngFor="let item of colors"
+        (click)="setColor(item)"
+        [class.nivchar]="item===selectedColor"
+    >{{item}}</li>
+  </ul>
+</div>
+<div class="sizes-area">
+  <ul>
+    <li *ngFor="let item of sizes"
+        (click)="setSize(item)"
+        [class.nivchar]="item===selectedSize"
+    >{{item}}</li>
+  </ul>
+</div>
+<div class="fonts-area">
+  <ul>
+    <li *ngFor="let item of fonts"
+        (click)="setFont(item)"
+        [class.nivchar]="item===selectedFont"
+    >{{item}}</li>
+  </ul>
+
+</div>
+<div class="text-area">
+  <textarea  
+    [style.color]="selectedColor"
+    [style.font-family]="selectedFont"
+    [style.font-size]="selectedSize"
+  ></textarea>
+</div>

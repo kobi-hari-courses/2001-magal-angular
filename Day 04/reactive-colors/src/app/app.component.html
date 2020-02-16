@@ -1,0 +1,13 @@
+<input #inp type="search" (input)="onInput(inp.value)">
+
+{{isBusy$ | async}}
+
+<hr>
+
+<div class="results">
+    <div class="item" *ngFor="let color of (colors$|async)"
+        [style.background-color]="color.code"
+    >
+        {{color.displayName}}
+    </div>
+</div>

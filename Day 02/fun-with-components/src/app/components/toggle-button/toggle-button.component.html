@@ -1,0 +1,10 @@
+<div class="button-host">
+    <button (click)="toggle()">
+        <span *ngIf="!state">+</span>
+        <span *ngIf="state">-</span>
+    </button>
+</div>
+
+<div *ngIf="state">
+    <ng-content></ng-content>
+</div>

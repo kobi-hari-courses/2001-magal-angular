@@ -1,0 +1,37 @@
+<div class="title-area">
+  <app-title-presenter 
+    [caption]="myTitle"
+    color="yellow"
+    ></app-title-presenter>
+</div>
+
+<div class="colors-area">
+  <app-string-selector
+    [options]="colors"
+    [selected]="selectedColor"
+    (selectionRequested)="setColor($event)"
+    >
+  </app-string-selector
+  >
+</div>
+<div class="sizes-area">
+  <app-string-selector
+    [options]="sizes"
+    [selected]="selectedSize"
+    (selectionRequested)="setSize($event)"
+  ></app-string-selector>
+</div>
+<div class="fonts-area">
+  <app-string-selector
+    [options]="fonts"
+    [selected]="selectedFont"
+    (selectionRequested)="setFont($event)"
+  ></app-string-selector>
+</div>
+<div class="text-area">
+  <textarea  
+    [style.color]="selectedColor"
+    [style.font-family]="selectedFont"
+    [style.font-size]="selectedSize"
+  ></textarea>
+</div>

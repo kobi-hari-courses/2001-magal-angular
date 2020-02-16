@@ -1,0 +1,10 @@
+img {
+    height: 30px;
+    margin: 4px;
+}
+
+.panel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}

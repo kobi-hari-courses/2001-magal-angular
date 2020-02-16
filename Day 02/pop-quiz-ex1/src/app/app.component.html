@@ -1,0 +1,17 @@
+<div class="root">
+  <h1 class="caption">{{question.caption}}</h1>
+  <ul>
+    <li *ngFor="let answer of question.answers;let i = index"
+      (click)="selectAnswer(i)"
+      [class.selected]="i===selectedAnswerIndex"
+      [class.not-selected]="i!==selectedAnswerIndex"
+      [class.active]="!isAnswerSelected"
+      [class.not-active]="isAnswerSelected"
+      [class.correct]="i===question.correctAnswerIndex"
+      [class.wrong]="i!==question.correctAnswerIndex"
+    >{{answer}}</li>
+  </ul>
+  <div>
+    <button (click)="reset()" *ngIf="isAnswerSelected">Reset</button>
+  </div>
+</div>

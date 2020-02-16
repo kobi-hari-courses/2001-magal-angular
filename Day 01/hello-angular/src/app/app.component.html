@@ -1,0 +1,12 @@
+<div class="panel">
+  <input #searchBox [disabled]="isBusy" type="search" 
+          (input)="setKeyword(searchBox.value)">
+  <button [disabled]="isBusy" (click)="search()" >Go!</button>
+  <img *ngIf="isBusy" src="https://i.gifer.com/M6St.gif">
+</div>
+
+<hr>
+
+<ul>
+  <li *ngFor="let item of results">{{item}}</li>
+</ul>

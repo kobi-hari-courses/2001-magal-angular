@@ -1,0 +1,50 @@
+:host {
+    display: grid;
+}
+
+div {
+    display: grid;
+}
+
+.root {
+    grid-template-rows: auto 1fr auto;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+li {
+    display: flex;
+    list-style: none;
+    border: 1px solid lightblue;
+    background-color: rgba(173, 216, 230, 0.479);
+    width: 60px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+li.active {
+    cursor: pointer;
+}
+
+li.active:hover {
+    transform: scale(1.2);
+}
+
+li.not-active {
+    opacity: 0.5;
+}
+
+li.not-active.correct {
+    background: lightgreen;
+}
+li.not-active.wrong.selected {
+    background: lightsalmon;
+}

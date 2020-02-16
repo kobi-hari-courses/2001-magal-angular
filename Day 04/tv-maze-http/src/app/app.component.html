@@ -1,0 +1,14 @@
+<button (click)="go()">GO!</button>
+
+<div class="results" [style.height]="'200px'" [style.overflow-y]="'auto'">
+    <div *ngFor="let show of (shows|async)"
+        (click)="setSelected(show.id)"
+    >
+        {{show.name}}
+    </div>
+</div>
+
+<div *ngIf="(selectedShow$ | async) as show">
+    <h1>{{show.name}}</h1>
+    <img [src]="show.image.original">
+</div>
