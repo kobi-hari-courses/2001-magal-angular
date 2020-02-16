@@ -1,0 +1,20 @@
+.nav {
+    display: flex;
+    flex-direction: row;    
+    background-color: lightblue;
+}
+
+.nav li {
+    list-style: none;
+    background-color: lightblue;
+    padding: 4px;
+}
+
+.nav .po {
+    background-color: lightskyblue;
+}
+
+.nav a {
+    text-decoration: none;
+    color: black;
+}
