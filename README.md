@@ -7,6 +7,7 @@ Material and summaries of Angular course
 * 03 - [Services DI and Promises](https://github.com/kobi2294/Course-012020-Magal-Angular/wiki/Module-03-Services)
 * 04 - [Reactive using RxJS](https://github.com/kobi2294/Course-012020-Magal-Angular/wiki/Module-04-RxJS)
 * 05 - [Routing](https://github.com/kobi2294/Course-012020-Magal-Angular/wiki/Module-05---Routing)
+* 06 - [Forms and Pipes](https://github.com/kobi2294/Course-012020-Magal-Angular/wiki/Module-06-Reactive-Forms)
 
 ## Extra material
 * [Ex1 - Pop Quiz Exercise Description](https://www.dropbox.com/s/rkhx8ge3lj5um6t/Description.pptx?dl=0)
