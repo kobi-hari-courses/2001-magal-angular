@@ -1,0 +1,21 @@
+<form novalidate [formGroup]="form">
+    <div class="field">
+        <label>First Name:</label>
+        <input type="text" formControlName="firstName">
+    </div>
+    <div class="field">
+        <label>Last Name:</label>
+        <input type="text" formControlName="lastName">
+    </div>
+    <div class="field">
+        <label>Age:</label>
+        <input type="number" formControlName="age">
+    </div>
+</form>
+
+<button [disabled]="form.invalid">Save</button>
+
+<hr>
+{{ form.get('firstName').errors | json }} <br>
+
+<button (click)="setToJohn()">John</button>

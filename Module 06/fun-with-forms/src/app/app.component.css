@@ -1,0 +1,23 @@
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form.ng-invalid {
+    background: pink;
+}
+
+label {
+    width: 100px;
+    display: inline-block;
+    color: navy;
+    text-decoration: underline lightblue;
+}
+
+input {
+    outline: transparent;
+}
+
+input.ng-invalid.ng-dirty {
+    border: 1px solid red;
+}
