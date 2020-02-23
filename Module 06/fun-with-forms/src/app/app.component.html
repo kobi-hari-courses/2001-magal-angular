@@ -1,5 +1,15 @@
 <form novalidate [formGroup]="form">
     <div class="field">
+        <label>User Name:</label>
+        <input type="text" formControlName="userName">
+        <ng-container *ngIf="form.get('userName') as ctrl">
+            <div *ngIf="ctrl.errors as errs">
+                <div *ngIf="errs['required'] && ctrl.dirty" class="error">Field is required</div>
+                <div *ngIf="errs['availability']" class="error">User name is taken</div>
+            </div>
+        </ng-container>
+    </div>
+    <div class="field">
         <label>First Name:</label>
         <input type="text" formControlName="firstName">
     </div>
@@ -11,11 +21,47 @@
         <label>Age:</label>
         <input type="number" formControlName="age">
     </div>
+    <div class="field">
+        <label>Email:</label>
+        <input type="email" formControlName="email">
+    </div>
+    <div class="field">
+        <label>Credit Card:</label>
+        <input type="text" formControlName="creditCard">
+    </div>
+
+    <div formGroupName="address">
+        <div class="field">
+            <label>Street:</label>
+            <input type="text" formControlName="street">
+        </div>
+        <div class="field">
+            <label>City:</label>
+            <select formControlName="city">
+                <option value="haifa">Haifa</option>
+                <option value="tel-aviv">Tel Aviv</option>
+                <option value="beer-sheva">Patient 0</option>
+            </select>
+        </div>
+    </div>
+
+    <div formArrayName="aliases">
+        <div class="field" *ngFor="let ctrl of aliasesForms.controls; let i = index">
+            <label>Alias {{i+1}}:</label>
+            <button (click)="removeAlias(i)">-</button>
+            <input type="text" [formControl]="ctrl">
+        </div>
+
+        <button (click)="addAlias()">+</button>
+    </div>
 </form>
 
-<button [disabled]="form.invalid">Save</button>
+<div class="stuff">
+    <div class="buttons">
+        <button (click)="save()" [disabled]="form.invalid">Save</button>
+        <button (click)="setToJohn()">John</button>
+    </div>
 
-<hr>
-{{ form.get('firstName').errors | json }} <br>
+    {{ form.get('userName').status }} <br>
 
-<button (click)="setToJohn()">John</button>
+</div>
