@@ -1,0 +1,7 @@
+<h1>Today is: {{today | date | uppercase | reverse }}</h1>
+
+
+<h2 *ngFor="let num of numbers | filter:divider">{{num}}</h2>
+
+
+<button (click)="incDivider()">Inc</button>
