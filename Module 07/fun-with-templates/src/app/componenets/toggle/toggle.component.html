@@ -1,0 +1,7 @@
+<div class="outer" [style.background]="bg">
+    <h4>Toggle!</h4>
+    <button #toggleButton>Toggle</button>
+    <div class="inner" *ngIf="isShowing">
+        <ng-content></ng-content>
+    </div>
+</div>

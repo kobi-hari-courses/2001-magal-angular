@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'fun-with-templates';
+  numbers: number[] = [
+    5, 10, 20, -10, -5, 13, 8, 9
+  ]
+  
 }

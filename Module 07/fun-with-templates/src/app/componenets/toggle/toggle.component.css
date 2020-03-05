@@ -1,0 +1,7 @@
+.outer {
+    border: 1px solid brown;
+}
+
+.inner {
+    border: 1px solid green;
+}
