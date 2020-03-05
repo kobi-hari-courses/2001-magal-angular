@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, TemplateRef, ContentChild } from '@angular/core';
 
 @Component({
   selector: 'app-repeater',
@@ -9,7 +9,27 @@ export class RepeaterComponent implements OnInit {
   @Input()
   data: string[];
 
-  constructor() { }
+
+
+  @ContentChild(TemplateRef)
+  itemTemplate: TemplateRef<any>;
+
+  constructor() { 
+    let x = [1, 2, 3];
+    let y = [0, ...x, 5]
+
+    let z = {
+      a: 10, 
+      b: 20, 
+      c: 30
+    }
+
+    let w = {
+      ...z, 
+      a: 15
+    }
+  
+  }
 
   ngOnInit(): void {
   }

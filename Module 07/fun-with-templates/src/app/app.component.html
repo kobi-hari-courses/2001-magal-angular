@@ -1,21 +1,26 @@
 
-<ul>
-    <ng-container *ngFor="let num of numbers">
-        <li *ngIf="num % 2 === 0" >{{num}}</li>
-    </ng-container>
-</ul>
-
+<app-repeater [data]="['red', 'green', 'blue']">
+    <ng-template let-tseva>
+        <span [style.color]="tseva">Hello World</span>
+    </ng-template>    
+</app-repeater>
 
 <hr>
 
-<app-toggle>
-    <h1></h1>
-    <p></p>
-    <app-header></app-header>
-</app-toggle>
+<app-repeater [data]="['16px', '24px', '36px']">
+    <ng-template let-godel>
+        <span [style.font-size]="godel">Hello World</span>
+    </ng-template>    
+</app-repeater>
 
 
-<app-toggle>
-    <h1>Second Title</h1>
-    <hr>
-</app-toggle>
+<div *ngIf="62 > 58">
+    <span>62 is indeed more than 58</span>
+</div>
+
+<ng-template [ngIf]="62 > 58">
+    <div>
+        <span>62 is indeed more than 58</span>
+    </div>    
+</ng-template>
+
